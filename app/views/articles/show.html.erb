@@ -54,8 +54,7 @@
     <% if !@article.published ||
       (@article.score < 5 &&
         @article.user.comments_count < 1 &&
-        !@article.featured &&
-        @article.processed_html.exclude?("<code>")) ||
+        !@article.featured) ||
       @article.featured_number.to_i < 1500000000 ||
       @article.score < -1 %>
       <meta name="robots" content="noindex">
